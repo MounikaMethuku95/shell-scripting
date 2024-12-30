@@ -1,1 +1,1 @@
-# practive devsecops with aws
+# practice devsecops with aws
