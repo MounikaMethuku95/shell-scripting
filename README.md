@@ -1,1 +1,1 @@
-# daws
+# practice devsecops with aws
