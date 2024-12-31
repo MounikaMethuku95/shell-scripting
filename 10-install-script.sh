@@ -16,6 +16,7 @@ then # not installed
     if [ $? -ne 0 ]
     then
         echo "Installing MySQL ... FAILURE"
+        exit 1
     else
         echo "Installing MySQL ... SUCCESS"
     fi
@@ -38,6 +39,7 @@ then
     if [ $? -ne 0 ]
     then
         echo "Installing Git ... FAILURE"
+        exit 1
     else
         echo "Installing Git ... SUCCESSFUL"
     fi
