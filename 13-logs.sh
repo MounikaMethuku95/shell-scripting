@@ -28,14 +28,16 @@ then
     exit 1
 fi
 
-dnf list installed mysql &>> $LOG_FILE_NAME
+dnf list installed nodejs &>> $LOG_FILE_NAME
+dnf module disable nodejs -y &>> $LOG_FILE_NAME
+dnf module enable nodejs:20 -y &>> $LOG_FILE_NAME
 
 if [ $? -ne 0 ]
 then # not installed
-    dnf install mysql -y &>> $LOG_FILE_NAME
-    VALIDATE $? "INSTALLING Mysql"
+    dnf install nodejs -y &>> $LOG_FILE_NAME
+    VALIDATE $? "INSTALLING NodeJs"
 else
-    echo -e "MySQL is already ..$Y INSTALLED"
+    echo -e "NodeJs is already ..$Y INSTALLED"
 fi
 
 dnf list installed git &>> $LOG_FILE_NAME
