@@ -17,5 +17,7 @@ COUNT="words.txt"
 #     } ' | sort -rn
 #done < "$COUNT"
 
-tr '[:upper:]' '[:lower:]' < "$COUNT" | \ tr -c '[:alnum:]' '[\n*]' | \ uniq -c 
+tr '[:upper:]' '[:lower:]' < "$COUNT" | \ 
+tr -c '[:alnum:]' '[\n*]' | \ 
+uniq -c 
 
