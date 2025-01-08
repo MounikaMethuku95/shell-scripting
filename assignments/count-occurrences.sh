@@ -1,7 +1,6 @@
 #!/bin/bash
 
 COUNT="words.txt"
-G="\e[32m"
 
 #while IFS= read -r  occ 
 #do
