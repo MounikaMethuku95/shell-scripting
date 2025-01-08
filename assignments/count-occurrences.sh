@@ -17,12 +17,8 @@ COUNT="words.txt"
 #     } ' | sort -rn
 #done < "$COUNT"
 
-tr '[:upper:]' '[:lower:]' < "$COUNT" | \
-tr '\n' " " | \
-tr -s " " | \
-tr 'A-Z' 'a-z' | \
-sort | \
-uniq -c | \
-sort -rn
+#tr '[:upper:]' '[:lower:]' < "$COUNT" | tr '\n' " " | tr -s " " | tr 'A-Z' 'a-z' | sort | uniq -c | sort -rn
+
+sed -e 's/[^[:alpha:]]/ /g' linus.txt | tr '\n' " " |  tr -s " " | tr " " '\n'| tr 'A-Z' 'a-z' | sort | uniq -c | sort -nr | nl 
 
 
