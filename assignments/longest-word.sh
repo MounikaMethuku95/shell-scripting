@@ -5,7 +5,7 @@ G="\e[32m"
 for lw in $(<strings.txt)
 do
     len=${#lw}
-    if [[ len -gr longword ]]
+    if [[ len -gt longword ]]
     then 
         longword=$len
         longestword=$word
