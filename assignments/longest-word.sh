@@ -1,8 +1,8 @@
 #!/bin/bash
 
-longword="strings.txt"
+longword=0
 G="\e[32m"
-for lw in $(<longword)
+for lw in $(<strings.txt)
 do
     len=${#lw}
     if [ [ len -gr longword ]]
