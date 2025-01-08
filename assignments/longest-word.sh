@@ -23,4 +23,17 @@ longword="strings.txt"
 #done
 #echo "The longest word is $lw"
 
-awk 'BEGIN{fc=0;fw=""} $2~/ {if ($1>fc){fc=$1;fw=$2}} END{print fw}' <strings.txt
+awk BEGIN {
+            maxlength=0;
+            maxword=0;
+    for(i=1;i<=NF;i++) {
+         if (length($i)>maxlength) 
+         {
+            maxlength=length($i); 
+            maxword=$i;
+         }
+    }
+}
+END {
+  print maxword,maxlength;
+}
