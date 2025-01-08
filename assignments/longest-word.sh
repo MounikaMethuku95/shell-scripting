@@ -1,6 +1,6 @@
 #!/bin/bash
 
-longword=0
+longword="strings.txt"
 
 #for lw in $(<strings.txt)
 #do
@@ -23,12 +23,4 @@ longword=0
 #done
 #echo "The longest word is $lw"
 
-for lw in $(i=1;i<=NF;i++)
-do 
-   if [[ $(length(i)) -gt longword ]]
-   then
-       longword=$(length(i))
-       lw=$i
-   fi
-done
-echo "The longest word is $lw"
+awk 'BEGIN{fc=0;fw=""} $2~/ {if ($1>fc){fc=$1;fw=$2}} END{print fw}' <strings.txt
