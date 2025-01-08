@@ -25,9 +25,9 @@ longword=0
 
 for lw in $(i=1;i<=NF;i++)
 do 
-   if [[ $(length($i)) -gt longword ]]
+   if [[ $(length(i)) -gt longword ]]
    then
-       longword=$(length($i))
+       longword=$(length(i))
        lw=$i
    fi
 done
