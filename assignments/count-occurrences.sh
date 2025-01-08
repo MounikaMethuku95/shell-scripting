@@ -18,6 +18,11 @@ COUNT="words.txt"
 #done < "$COUNT"
 
 tr '[:upper:]' '[:lower:]' < "$COUNT" | \
-tr -c '[:alnum:]' '[\n*]' | \
-uniq -c
+tr '\n' " " | \
+tr -s " " | \
+tr 'A-Z' 'a-z' | \
+sort | \
+uniq -c | \
+sort -rn
+
 
