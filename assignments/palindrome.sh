@@ -9,4 +9,5 @@ do
       echo "The palindrome words in the given file are: $Pal"
   else
       echo "No palindrome words found"
-fi
+  fi
+done < "$FILE"
