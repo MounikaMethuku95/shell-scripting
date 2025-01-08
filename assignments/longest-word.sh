@@ -13,7 +13,7 @@ longword=0
 #done
 #echo " The longest word is  with length $word $longword"
 
-for lw in {i=1;i<=NF;i++}
+for lw in i=1;i<=NF;i++
 do 
    if [[length($i)>longword]]
    then
