@@ -11,4 +11,4 @@ do
         longestword=$word
     fi
 done
-echo " The longest word is..$G %s with length %d.' $longestword $longword"
+echo " The longest word is..$longword with length' $longestword $longword"
