@@ -1,6 +1,7 @@
 #!/bin/bash
 
 COUNT="words.txt"
+G="\e[32m"
 
 #while IFS= read -r  occ 
 #do
@@ -19,6 +20,6 @@ COUNT="words.txt"
 
 #tr '[:upper:]' '[:lower:]' < "$COUNT" | tr '\n' " " | tr -s " " | tr 'A-Z' 'a-z' | sort | uniq -c | sort -rn
 
-sed -e 's/[^[:alpha:]]/ /g' $COUNT | tr '\n' " " |  tr -s " " | tr " " '\n'| tr 'A-Z' 'a-z' | sort | uniq -c | sort -nr | nl 
+sed -e 's/[^[:alpha:]]/ /g' $G $COUNT | tr '\n' " " |  tr -s " " | tr " " '\n'| $G tr 'A-Z' 'a-z' | sort | uniq -c | sort -nr | nl 
 
 
