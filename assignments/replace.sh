@@ -9,6 +9,4 @@ file="/c/devops/daws-82s/repos/shell-scripting/assignments/words.txt"
 
 updated_file=$(sed -i "s/$originalword/$replacementword/g" $file)
 
-cat $file
-
-echo -e $G "Word replacement completed" 
+echo -e $G "Word replacement completed. The new file is $file" 
