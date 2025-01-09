@@ -7,7 +7,7 @@ R="\e[31m"
 B="\e[34m"
 N="\e[0m"
 
-timestamp=$(date +%Y%m%%d)
+timestamp=$(date +%Y%M%D)
 
 for file in "$dir"/*.txt; #for every file in the entore directory selected
 do
@@ -20,6 +20,7 @@ do
       echo "no text files are found"
       exit 1
   fi
-  echo -e $R "renamed all text files in the selected directory $dir" 
 done
+
+echo -e $R "renamed all text files in the selected directory" 
 
