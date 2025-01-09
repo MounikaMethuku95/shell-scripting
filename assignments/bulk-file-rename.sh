@@ -7,7 +7,7 @@ R="\e[31m"
 B="\e[34m"
 N="\e[0m"
 
-timestamp=$(date +%Y%M%D)
+timestamp=$(date +%Y%m%d)
 
 for file in "$dir"/*.txt; #for every file in the entore directory selected
 do
