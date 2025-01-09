@@ -13,13 +13,13 @@ for file in "$dir"/*.txt; #for every file in the entore directory selected
 do
   if [ -f "$file" ];
   then
-      filename=$(originalname "$file") #to store the filename in the var given
+      filename=$(basename "$file") #to store the filename in the var given
       echo -e $B "Files are there in the given directory: $file" $N #print if text files are present in the selected dir
       mv "$file" "$dir/${timestamp}_$filename" #replace the filename with timestamp
   else
       echo "no text files are found"
       exit 1
   fi
+  echo -e $R "renamed all text files in the selected directory $dir" 
 done
 
-echo -e $R "renamed all text files in the selected directory $dir" 
